@@ -10,7 +10,8 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "main": "index.js",
   "engines": {
@@ -19,10 +20,26 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chokidar": "^1.4.2",
+    "extend-shallow": "^2.0.1",
+    "lazy-cache": "^1.0.3"
+  },
   "devDependencies": {
+    "base": "^0.6.7",
+    "base-tasks": "^0.2.0",
     "mocha": "*",
     "should": "*"
   },
-  "keywords": []
+  "keywords": [],
+  "verb": {
+    "related": {
+      "list": [
+        "base",
+        "base-tasks",
+        "composer",
+        "chokidar"
+      ]
+    }
+  }
 }
