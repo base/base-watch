@@ -2,11 +2,11 @@
   "name": "base-watch",
   "description": "Watch plugin for base applications.",
   "version": "0.1.0",
-  "homepage": "https://github.com/base/base-watch",
+  "homepage": "https://github.com/node-base/base-watch",
   "author": "Brian Woodward (https://github.com/doowb)",
-  "repository": "base/base-watch",
+  "repository": "node-base/base-watch",
   "bugs": {
-    "url": "https://github.com/base/base-watch/issues"
+    "url": "https://github.com/node-base/base-watch/issues"
   },
   "license": "MIT",
   "files": [

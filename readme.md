@@ -1,4 +1,4 @@
-# base-watch [![NPM version](https://img.shields.io/npm/v/base-watch.svg)](https://www.npmjs.com/package/base-watch) [![Build Status](https://img.shields.io/travis/base/base-watch.svg)](https://travis-ci.org/base/base-watch)
+# base-watch [![NPM version](https://img.shields.io/npm/v/base-watch.svg)](https://www.npmjs.com/package/base-watch) [![Build Status](https://img.shields.io/travis/node-base/base-watch.svg)](https://travis-ci.org/node-base/base-watch)
 
 > Watch plugin for base applications.
 
