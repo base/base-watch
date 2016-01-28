@@ -28,8 +28,7 @@
   "devDependencies": {
     "base": "^0.6.7",
     "base-tasks": "^0.2.0",
-    "mocha": "*",
-    "should": "*"
+    "mocha": "^2.4.4"
   },
   "keywords": [],
   "verb": {
