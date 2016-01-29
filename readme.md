@@ -20,7 +20,7 @@ var watch = require('base-watch');
 var Base = require('base');
 var base = new Base();
 
-base(watch());
+base.use(watch());
 ```
 
 **[assemble-core](https://github.com/assemble/assemble-core)**
@@ -33,7 +33,7 @@ var watch = require('base-watch');
 var assemble = require('assemble-core');
 var app = assemble();
 
-app(watch());
+app.use(watch());
 ```
 
 ## API
