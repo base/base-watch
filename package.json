@@ -1,7 +1,7 @@
 {
   "name": "base-watch",
   "description": "Watch plugin for base applications.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/node-base/base-watch",
   "author": "Brian Woodward (https://github.com/doowb)",
   "repository": "node-base/base-watch",
@@ -28,17 +28,28 @@
   "devDependencies": {
     "base": "^0.6.7",
     "base-tasks": "^0.2.0",
-    "mocha": "^2.4.4"
+    "gulp-format-md": "^0.1.5",
+    "mocha": "*"
   },
-  "keywords": [],
   "verb": {
     "related": {
       "list": [
         "base",
+        "base-generators",
         "base-tasks",
-        "composer",
-        "chokidar"
+        "chokidar",
+        "composer"
       ]
-    }
+    },
+    "reflinks": [
+      "assemble",
+      "assemble-core",
+      "composer"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "layout": "default",
+    "toc": false
   }
 }
