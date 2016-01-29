@@ -19,14 +19,12 @@ var utils = require('./utils');
  * ```js
  * app.use(watch());
  * ```
- *
- * @return {Function} plugin function to be used in a [base][] application.
+ * @return {Function} Returns the plugin function to be used in a [base][] application.
  * @api public
- * @name plugin
  */
 
-module.exports = function() {
-  return function plugin(app) {
+module.exports = function(config) {
+  return function(app) {
     if (this.isRegistered('base-watch')) {
       return;
     }
@@ -39,12 +37,12 @@ module.exports = function() {
      * ```js
      * var watcher = app.watch('templates/pages/*.hbs', ['site']);
      * ```
+     * @name watch
      * @param  {String|Array} `glob` Filename, Directory name, or glob pattern to watch
      * @param  {Object} `options` Additional options to be passed to [chokidar][]
      * @param  {String|Array|Function} `tasks` Tasks that are passed to `.build` when files in the glob are changed.
      * @return {Object} Returns an instance of `FSWatcher` from [chokidar][]
      * @api public
-     * @name watch
      */
 
     this.define('watch', function(glob, options/*, fns/tasks */) {
@@ -52,23 +50,25 @@ module.exports = function() {
       var len = arguments.length - 1, i = 0;
       var args = new Array(len + 1);
       while (len--) args[i] = arguments[++i];
-      args[i] = done;
+      args[i] = cb;
 
       var opts = {};
       if (typeof options === 'object' && !Array.isArray(options)) {
         args.shift();
-        opts = utils.extend(opts, options);
+        opts = utils.extend({}, options);
       }
 
+      opts = utils.extend({}, config, opts);
+
       var building = true;
-      function done(err) {
+      function cb(err) {
         building = false;
         if (err) console.error(err);
       }
 
       var watch = utils.chokidar.watch(glob, opts);
 
-      // only contains our `done` function
+      // only contains our `cb` function
       if (args.length === 1) {
         return watch;
       }
