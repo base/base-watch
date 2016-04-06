@@ -32,6 +32,14 @@
     "mocha": "*"
   },
   "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
     "related": {
       "list": [
         "base",
@@ -45,11 +53,6 @@
       "assemble",
       "assemble-core",
       "composer"
-    ],
-    "plugins": [
-      "gulp-format-md"
-    ],
-    "layout": "default",
-    "toc": false
+    ]
   }
 }
